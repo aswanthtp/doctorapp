@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/194/194915.png" alt="" width="60" height="48">
+      DocApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active">Profile</a>
+          <a class="nav-link" routerLink="/appointments" routerLinkActive="active">Appointments</a>
+          
+          <a class="nav-link" routerLink="/admin" routerLinkActive="active">Admin</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Location
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Trivandrum</a></li>
+              <li><a class="dropdown-item" href="#">United States</a></li>
+              <li><a class="dropdown-item" href="#">Mumbai</a></li>
+            </ul>
+          </li>
+          <a>
+          <button type="button" class="btn btn-light"> Log Out </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>

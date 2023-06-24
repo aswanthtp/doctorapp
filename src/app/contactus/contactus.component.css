@@ -1,0 +1,94 @@
+.contact .row {
+    margin: 60px 0 90px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #contact{
+    /* background-image: url("https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2019/07/mac-dynamic-wallpapers.jpg"); */
+    /* height: 100vh; */
+    background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/180231/180231_00_2x.jpg");
+ 
+    min-height: 100vh;
+  
+    width:100%;
+    background-position: center ;
+    background-size: 1300px 1000px;
+    background-repeat: no-repeat;
+    
+  }
+  .container{
+     text-align: center;
+     /* margin-top: 100px; */
+     margin-bottom: 50px;
+    
+  }
+  
+  
+  .contact .row .col {
+    padding: 0 10px;
+    width: calc(100% / 2 - 50px);
+  }
+  
+  .contact .col p {
+    margin-bottom: 10px;
+  }
+  
+  .contact .col p i {
+    color: #7a7a7a;
+    margin-right: 0px;
+  }
+  
+  .contact form input {
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #bfbfbf;
+  }
+  
+  .contact form textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    height: 150px;
+    outline: none;
+    resize: vertical;
+    border-radius: 3px;
+    border: 1px solid #a39d9d;
+  }
+  .contact-details{
+    color:white;
+    margin-bottom: 200px;
+    margin-left: 80px;
+  }
+  
+  
+  .contact form  text{
+    border: 1px solid #161515;
+  }
+  
+  .contact form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: #fff;    
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #333;
+    transition: 0.2s ease;
+  }
+  
+  .contact form button:hover {
+    background: #525252;
+  }
+  
+  .col-form{
+    margin-left: 50px;
+  }
+  

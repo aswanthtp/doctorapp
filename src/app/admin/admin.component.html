@@ -1,0 +1,155 @@
+<app-navbar></app-navbar>
+<div class="container custom-container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9">
+            <div class="row profile">
+                <div class="col-md-12 bg-light">
+                    <div class="row">
+                        <div class="col-md-12 custom-search-container">
+                            <!-- <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search for a doctor">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">Search</button>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Add Doctor</h5>
+                              <form [formGroup]="adminForm" (ngSubmit)="addDoctor()">
+                                <div class="form-group">
+                                  <label for="fullName">Full Name</label>
+                                  <input type="text" id="fullName" class="form-control" placeholder="Full Name" formControlName="fullName">
+                                </div>
+                                <div class="form-group">
+                                  <label for="specialisation">Specialization</label>
+                                  <input type="text" id="specialisation" class="form-control" placeholder="Specialization" formControlName="specialising">
+                                </div>
+                                <div class="form-group">
+                                  <label for="location">Location</label>
+                                  <input type="text" id="location" class="form-control" placeholder="Location" formControlName="location">
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          
+                        <!-- Add more cards for other doctors -->
+                        <div class="row align-items-start p-3 ed-del" *ngFor="let doctor of doctors; let i = index">
+
+                            <div class="col align-self-center">
+                    
+                                <div class="mb-3">
+                    
+                                    <label class="form-label">Doctor Name:</label>
+                    
+                                    <div *ngIf="isEditing[i]">
+                    
+                                        <input type="text" class="form-control" [(ngModel)]="doctor.fullName" />
+                    
+                                    </div>
+                    
+                                </div>
+                    
+                                <div *ngIf="!isEditing[i]">
+                    
+                                    <div>{{ doctor.fullName }}</div>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                            <div class="col align-self-center">
+                    
+                                <div class="mb-3">
+                    
+                                    <label class="form-label">Specialization:</label>
+                    
+                                    <div *ngIf="isEditing[i]">
+                    
+                                        <input type="text" class="form-control" [(ngModel)]="doctor.specialising" />
+                    
+                                    </div>
+                    
+                                    <div *ngIf="!isEditing[i]">
+                    
+                                        <div>{{doctor.specialising }}</div>
+                    
+                                    </div>
+                    
+                                </div>
+                    
+                                <div class="mb-3">
+                    
+                                    <label class="form-label">Location:</label>
+                    
+                                    <div *ngIf="isEditing[i]">
+                    
+                                        <input type="text" class="form-control" [(ngModel)]="doctor.location" />
+                    
+                                    </div>
+                    
+                                    <div *ngIf="!isEditing[i]">
+                    
+                                        <div>{{doctor.location }}</div>
+                    
+                                    </div>
+                    
+                                </div>
+                    
+                                <!-- <div class="mb-3">
+                    
+                                    <label class="form-label">Rating:</label>
+                    
+                                    <div *ngIf="isEditing[i]">
+                    
+                                        <input type="text" class="form-control" (ngModel)="doctor.doctorRating" />
+                    
+                                    </div>
+                    
+                                    <div *ngIf="!isEditing[i]">
+                    
+                                        <div>{{doctor.doctorRating }}</div>
+                    
+                                    </div>
+                    
+                                </div> -->
+                    
+                            </div>
+                    
+                            <div class="col align-self-center">
+                    
+                                <div class="d-flex justify-content-center">
+                    
+                                    <button type="button" class="btn btn-primary" [ngClass]="{'btn-primary-disabled': !isEditing[i]}"
+                                    (click)="isEditing[i] ? updateDoctor(doctor, i) : isEditing[i] = true">
+                    
+                                        {{ isEditing[i] ? 'Save' : 'Edit' }}
+                    
+                                    </button>
+                    
+                                    <button type="button" class="btn btn-danger" (click)="deleteDoctor(i)">
+                    
+                                        Delete
+                    
+                                    </button>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                        </div>
+
+                    <!-- ......................................................... -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,31 @@
+#header{
+    margin-top: 180px;
+    margin-bottom: 150px;
+    height: 500px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://t4.ftcdn.net/jpg/04/69/42/03/240_F_469420394_FsODNPrtzeVezQsE45n86BkJPd9Wndua.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(166, 152, 180);
+}
+
+h1{
+    
+    color: #ebe3ea;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#description{
+    /* background: rgb(0, 0, 0, 0.5); */
+    padding: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+

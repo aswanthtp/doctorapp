@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container custom-container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-9">
+            <div class="row profile">
+                <div class="col-md-12 bg-light">
+                    <div class="row">
+                        <div class="col-md-12 custom-search-container">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search for a doctor">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 custom-doctor-container" *ngFor="let doctor of doctors">
+                            <div class="card">
+                                <div class="card">
+                                    <div class="card-body d-flex flex-column">
+                                      <h5 class="card-title">{{doctor.doctorId}}</h5>
+                                      <p class="card-text">fullName: {{ doctor.fullName }}</p>
+                                      <p class="card-text">Specialization: {{ doctor.specialising }}</p>
+                                      <p class="card-text">Location: {{ doctor.location }}</p>
+                                      <button class="btn btn-success ml-auto">Book Appointment</button>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <!-- Add more cards for other doctors -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
